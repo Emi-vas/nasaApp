@@ -1,0 +1,249 @@
+
+.main-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 20px 0;
+}
+
+.main {
+    display: flex;    
+    justify-content: center;
+
+    width: 80%;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.791);
+    border-radius: 20px;
+    box-shadow: #1f1f1f 3px 5px 2px;
+
+    & .detached-icon {
+        font-size: 1.7em;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        color: rgb(102, 107, 129);
+        transform: scaleY(-1);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__elem {
+        width: 50%;
+        position: relative;
+    }
+
+    &__previsu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        i {
+            font-size: 7em;
+            color: rgba(140, 163, 171, 0.625);
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 600px;
+        }
+    }
+}
+
+.main--detached {
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    z-index: 3;
+    transform: translateX(80%);
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.799);
+    border-radius: 20px;
+
+    transition: all 0.3s;
+    min-height: 400px;
+
+    & .detached-icon {
+        right: unset;
+        left: 30px;
+        transform: scaleX(-1) scaleY(1)
+    }
+
+    &:hover {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    padding: 20px;
+}
+
+.main-paysage {
+    flex-direction: column-reverse;
+    &__elem {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .main {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .main {
+        & .detached-icon {
+            font-size: 1.3em;
+        }
+        &__elem:first-of-type {
+            width: 70%;
+        }
+        &__elem:last-of-type {
+            width: 30%;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .main {
+        flex-direction: column;
+        & .detached-icon {
+            display: none;
+        }
+        &__elem:first-of-type {
+            width: 100%;
+        }
+        &__elem:last-of-type {
+            width: 100%;
+        }
+        &__previsu {
+            i, img {
+                display: none;
+            }
+        }
+    }
+}
+
+
+.bigImage {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    img {
+       // max-width: 100%;
+       object-fit: cover;
+       background: transparent;
+    }
+}
+
+
+
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    i{ 
+        color: grey;
+        font-size: 1.2em;
+        &:hover {
+            color: $blue2;
+            cursor: pointer;
+        }
+    }
+
+    &--size {   
+        & .first_bloc {
+            margin-top: 10px;
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        & .textInput {
+            width: 70px;
+            margin-left: 10px;
+        }
+
+        & .second_bloc {
+            margin-top: 50px;
+        }
+
+        & .vertical {
+            transform: rotate(0.75turn);
+        }
+    }
+
+    &--settings {
+        width: 100%;        
+    }
+
+    &--filter {
+        width: 100%;
+
+        & .bloc1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 30%;
+            margin: auto;
+            margin-top: 15px;
+        }
+    }
+
+    & .blocBigInput {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+        margin: auto;
+        margin-top: 15px;
+
+        input {
+            width: 70%;
+        }
+        label {
+            width: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .settings {
+        & .blocBigInput {
+            width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .settings {
+        & .blocBigInput {
+            flex-direction: column;
+            margin-top: 30px;
+            padding: 7px;
+            background: #8cb7d646;
+            width: 100%;
+            box-sizing: border-box;
+            label {
+                width: 100%;
+            }
+        }
+        &--filter {
+            & .bloc1 {
+                width: 50%;
+            }
+        }
+        &--size {
+            & .second_bloc {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

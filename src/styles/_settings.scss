@@ -1,0 +1,124 @@
+$blue : rgb(19, 60, 120);
+$blue2 :rgb(36, 140, 220);
+$blue3 :rgb(131, 201, 255);
+$green :rgba(13, 102, 103, 1);
+$orange : rgb(255, 191, 63);
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.05em;
+    color: rgb(39, 39, 39);
+
+    background: url("./assets/bg.svg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+
+
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 2.3em;
+    letter-spacing: 0.1em;
+}
+
+button {
+    color: $blue;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 30px;
+    padding: 15px 12px;
+    font-size: inherit;
+    font-family: inherit;
+    box-shadow: rgba(80, 80, 80, 0.609) 2px 2px 3px;
+    margin: 10px;
+
+    &:hover {
+        border: $blue2 solid 1px;
+        color: $blue2;
+        cursor: pointer;
+        background: rgb(236, 245, 255);
+    }
+    
+    &.active {
+        background: $blue2;
+        color: white;
+        border-color: $blue2;
+    }
+
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    
+    & button {
+        width: 100px;
+    }
+}
+
+input {
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+    border: 1px solid rgb(189, 189, 189);
+    padding: 7px;
+    border-radius: 7px;
+
+    &:focus {
+        box-shadow: 0px 0px 5px rgb(16, 156, 231);
+    }
+}
+
+.checkbox {
+    width: 45px;
+    height: 20px;
+    border-radius: 30px;
+    border: rgba(128, 128, 128, 0.652) 1px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-y: hidden;
+
+    & .elem {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        transform: translateX(-22px);
+        transition: all 0.3s;
+
+        & .circle{
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 1px solid grey;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        & .rec {
+            width: 50px;
+            height: 20px;
+            position: absolute;
+            background: #93dbff;
+            background: $orange;
+            background: $blue3;
+            left: -40px;
+        }
+    }
+
+    &--active {
+        & .elem {
+            transform: translateX(0);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,83 @@
+.videoEarth {
+    position: relative;
+    margin: 90px 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    video {
+        border-radius: 50%;
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    & .sat-cont {
+        position: absolute;
+        animation: rotation 30s infinite linear ;
+
+
+        &2 {
+            animation: rotation infinite  10s linear;
+        }
+
+        @keyframes rotation {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+    }
+
+    & .sat {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background: rgb(31, 219, 166);
+        background: url("../assets/sat.svg");
+        position: relative;
+        bottom: 250px;
+        z-index: 2;
+
+        animation: rotateSate infinite 30s linear ;
+
+        &2 {
+            bottom:  300px;
+            background: rgb(30, 158, 237);
+            background: url("../assets/sat.svg");
+
+            animation: rotateSate infinite 15s linear ;
+
+        }
+
+        &::before {
+            position: absolute;
+            top: -30px;
+            bottom: -30px;
+            left: -30px;
+            right: -30px;
+            content: "";
+            background: rgb(31, 219, 166);
+            border-radius: 50%;
+
+            opacity: 0.1;
+            animation: radar 3s infinite;
+        }
+
+        @keyframes rotateSate {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        @keyframes radar {
+            to {
+                transform: scale(0);
+                opacity: 1;
+            }
+        }
+    }
+    
+}
