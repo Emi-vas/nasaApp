@@ -1,0 +1,69 @@
+.fireBall {
+    i {
+        padding: 5px;
+        border-radius: 5px;
+        background: rgba(6, 67, 116, 0.697);
+    }
+
+    &--1 {
+        i {
+            font-size: 2em;
+            color: rgb(148, 237, 224);
+        }
+    }
+    &--2 {
+        i {
+            font-size: 2.5em;
+            color: rgb(255, 184, 52);
+        }
+    }
+    &--3 {
+        i {
+            font-size: 3em;
+            color: rgb(255, 54, 54);
+        }
+    }
+}
+
+.nasa_map {
+    position: relative;
+   
+    & .legend {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+
+        background: rgba(3, 47, 78, 0.765);
+        color: white;
+        padding: 10px;
+
+        &__elem {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-left: 10px;
+            }  
+            i {
+                font-size: 1.3em;
+            }
+        }
+        &__elem:nth-of-type(1) {
+            i {
+                color: rgb(148, 237, 224);
+            }
+        }
+        &__elem:nth-of-type(2) {
+            i {
+                color: rgb(255, 184, 52);
+            }
+        }
+        &__elem:nth-of-type(3) {
+            i {
+                color: rgb(255, 54, 54);
+            }
+        }
+    }
+
+}

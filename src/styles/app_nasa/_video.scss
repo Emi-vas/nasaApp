@@ -15,13 +15,14 @@
         object-fit: cover;
     }
 
+
     & .sat-cont {
         position: absolute;
         animation: rotation 30s infinite linear ;
 
 
         &2 {
-            animation: rotation infinite  10s linear;
+            animation: rotation infinite  15s linear;
         }
 
         @keyframes rotation {
@@ -44,12 +45,11 @@
         animation: rotateSate infinite 30s linear ;
 
         &2 {
-            bottom:  300px;
+            bottom:  320px;
             background: rgb(30, 158, 237);
             background: url("../assets/sat.svg");
 
-            animation: rotateSate infinite 15s linear ;
-
+            animation: rotateSate infinite 30s linear ;
         }
 
         &::before {
@@ -71,6 +71,7 @@
                 transform: rotate(1turn);
             }
         }
+
 
         @keyframes radar {
             to {

@@ -16,7 +16,7 @@ const VideoEarth = () => {
             <div className='sat-cont'>
                 <div className='sat'></div>
             </div>
-            {/* <div className='sat-cont sat-cont2'>
+{/*             <div className='sat-cont sat-cont2'>
                 <div className='sat sat2'></div>
             </div> */}
         </div>
