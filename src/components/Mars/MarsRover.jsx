@@ -58,7 +58,7 @@ const MarsRover = () => {
     return (
         <div className='mars'>
             <h2 className='nasa_titre'>Mars Pictures</h2>
-            <div className='marsRover'>
+            <div className='marsRover' id='rover'>
                 <img src="assets/img/mars-rover.png" alt="Mars Rover" />
                 <MarsIcon setListSelected={setListSelected} name="cam1"/>
                 <MarsIcon setListSelected={setListSelected} name="cam2"/>

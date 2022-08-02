@@ -70,6 +70,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: center;
 
     width: 100%;
     margin: auto;
@@ -79,6 +80,7 @@
     box-sizing: border-box;
     & .min {
         width: 300px;
+        height: auto;
         margin: 10px;
         &:hover {
             cursor: pointer;
@@ -149,4 +151,56 @@
         }
     }
 
+}
+
+.fullScreen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(11, 45, 83, 0.859);
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        color: white;
+        font-size: 4em;
+        position: absolute;
+        top: 50px;
+        right: 70px;
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(129, 209, 255);
+        }
+    }
+
+    img {
+        max-width: 80%;
+        //max-height: 95vh;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .fullScreen {
+        i {
+            top: 30px;
+            right: 50px;
+        }
+        img {
+            max-width: 90%;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .fullScreen {
+        i {
+            font-size: 2em;
+            top: 50px;
+            right: 20px;
+        }
+    }
 }
