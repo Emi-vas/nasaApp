@@ -65,5 +65,24 @@
             }
         }
     }
+}
 
+@media screen and (max-width: 700px) {
+    .nasa_map {
+        & .legend {
+            padding: 5px;
+            h3 {
+                display: none;
+            }
+            &__elem {
+                p {
+                    margin: 5px;
+                }
+                i {
+                    font-size: 1em;
+                }
+
+            }
+        }
+    }
 }

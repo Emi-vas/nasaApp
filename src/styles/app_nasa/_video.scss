@@ -10,8 +10,6 @@
 
     video {
         border-radius: 50%;
-        width: 500px;
-        height: 500px;
         object-fit: cover;
     }
 
@@ -80,5 +78,21 @@
             }
         }
     }
-    
+}
+
+@media screen and (max-width: 700px) {
+    .videoEarth {
+        margin: 50px 0;
+        & .sat {
+            bottom: 150px;
+            width: 30px;
+            height: 30px;
+            &::before {
+                top: -15px;
+                bottom: -15px;
+                left: -15px;
+                right: -15px;
+            }
+        }
+    }
 }

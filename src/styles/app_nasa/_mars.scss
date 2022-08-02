@@ -1,5 +1,6 @@
 .mars {
     margin-top: 150px;
+    overflow: hidden;
 }
 
 .marsRover {
@@ -16,6 +17,19 @@
         justify-content: center;
         align-items: center;
         position: absolute;
+
+        &--cam1 {
+            top: 130px;
+            left: 597px;
+        }
+        &--cam2 {
+            top: 75px;
+            left: 35px;
+        }
+        &--cam3 {
+            top: 580px;
+            left: 530px;
+        }
 
         & i {
             color: white;
@@ -51,6 +65,7 @@
     }
 }
 
+
 .marsList {
     display: flex;
     justify-content: space-around;
@@ -59,8 +74,9 @@
     width: 100%;
     margin: auto;
     background: $bg-green;
-    padding: 30px;
+    padding: 10px;
     border-radius: 30px;
+    box-sizing: border-box;
     & .min {
         width: 300px;
         margin: 10px;
@@ -68,4 +84,69 @@
             cursor: pointer;
         }
     }
+}
+
+@media screen and (max-width: 1000px) {
+    .marsRover{
+        width: 700px;
+        .marsIcon {
+            &--cam1 {
+                top: 85px;
+                left: 420px;
+            }
+            &--cam2 {
+                top: 33px;
+                left: 20px;
+            }
+            &--cam3 {
+                top: 370px;
+                left: 380px;
+            }
+        }
+    }
+
+    .marsList {
+        padding: 3px;
+        & .min {
+            width: 170px;
+            margin: 7px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .marsRover {
+        width: 400px;
+        .marsIcon {
+            &--cam1 {
+                top: 43px;
+                left: 240px;
+            }
+            &--cam2 {
+                top: 13px;
+            }
+            &--cam3 {
+                left: 217px;
+                top: 210px;
+            }
+
+            & i:first-of-type {
+                font-size: 3.3em;
+            }
+            & i:last-of-type {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .marsList {
+        margin-top: 30px;
+        width: 90%;
+        & .min {
+            width: 100px;
+            margin: 7px;
+        }
+    }
+
 }

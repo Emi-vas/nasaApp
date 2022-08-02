@@ -1,8 +1,8 @@
 import React from 'react';
 
-const MarsIcon = ({ pos, setListSelected, name }) => {
+const MarsIcon = ({ setListSelected, name }) => {
     return (
-        <div className='marsIcon' style={{ top: pos[0], left: pos[1] }} onClick={() => setListSelected(name)}>
+        <div className={`marsIcon marsIcon--${name}`}  onClick={() => setListSelected(name)}>
             <i className="fa-brands fa-galactic-republic"></i>
             <i className="fa-solid fa-camera"></i>
         </div>

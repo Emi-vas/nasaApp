@@ -35,3 +35,21 @@
         }
     }
 }
+
+@media screen and (max-width: 700px) {
+    .nasa_dayPicture {
+        & .img-min {
+            width: 90%;
+        }
+        & .desc {
+            width: 80%;
+            padding: 10px;
+            //margin-top: 30px;
+            font-size: 0.8em;
+            i {
+                top: -10px;
+                left: -15px;
+            }
+        }
+    }
+}

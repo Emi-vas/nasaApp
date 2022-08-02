@@ -60,9 +60,9 @@ const MarsRover = () => {
             <h2 className='nasa_titre'>Mars Pictures</h2>
             <div className='marsRover'>
                 <img src="assets/img/mars-rover.png" alt="Mars Rover" />
-                <MarsIcon pos={[130, 597]} setListSelected={setListSelected} name="cam1"/>
-                <MarsIcon pos={[75, 35]} setListSelected={setListSelected} name="cam2"/>
-                <MarsIcon pos={[580, 530]} setListSelected={setListSelected} name="cam3"/>
+                <MarsIcon setListSelected={setListSelected} name="cam1"/>
+                <MarsIcon setListSelected={setListSelected} name="cam2"/>
+                <MarsIcon setListSelected={setListSelected} name="cam3"/>
                 {
                     listSelected && <MarsList cam={listSelected} data={data} />
                 }
